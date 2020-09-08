@@ -1,13 +1,15 @@
 # AWS ACM Wildcard
 
-This module generates AWS ACM SSL Certificates for a given Route53 DNS Zone.
+This module generates AWS ACM SSL Certificates for a given Route53 DNS Zone in regions us-west-2 & us-east-1. 
+
+*It should be noted that this module uses an anti-pattern as it includes providers for AWS in two regions. Removing these resources if needed is currently a manual process. Once resources are removed you should also manually remove them from your terraform state.*
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.12.6 |
+| terraform | ~> 0.12.29 |
 | aws | ~> 2.53 |
 
 ## Providers
